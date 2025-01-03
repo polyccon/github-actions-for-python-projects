@@ -42,7 +42,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          pytest app/ --cov=app/ --junitxml=unit-test-results.xml
+          pytest --junitxml=unit-test-results.xml
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
