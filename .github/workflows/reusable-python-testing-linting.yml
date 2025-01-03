@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Print variables for demo
         if: ${{ inputs.foo }}
-        run: echo ${inputs.foo}
+        run: echo ${{inputs.foo}}
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
