@@ -6,6 +6,9 @@ on:
       foo:
         required: false
         type: string
+      name:
+        required: false
+        type: string
 
 env:
   JEST_JUNIT_OUTPUT_FILE: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/*.xml"
@@ -33,6 +36,9 @@ jobs:
       - name: Print variables for demo
         if: ${{ inputs.foo }}
         run: echo ${{inputs.foo}}
+      - name: Print variables for demo
+        if: ${{ inputs.name }}
+        run: echo ${{inputs.name }}
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
