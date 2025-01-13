@@ -33,10 +33,10 @@ jobs:
       checks: write
       pull-requests: write
     steps:
-      - name: Print variables for demo
+      - name: Print variable foo for demo
         if: ${{ inputs.foo }}
         run: echo ${{inputs.foo}}
-      - name: Print variables for demo
+      - name: Print variable name for demo
         if: ${{ inputs.name }}
         run: echo ${{inputs.name }}
       - uses: actions/checkout@v2
