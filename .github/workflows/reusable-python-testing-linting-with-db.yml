@@ -10,6 +10,10 @@ on:
 env:
   JEST_JUNIT_OUTPUT_FILE: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/*.xml"
   DJANGO_SETTINGS_MODULE: ${{ inputs.DJANGO_SETTINGS_MODULE }}
+  DATABASE_HOST: ${{ vars.DATABASE_HOST }}
+  DATABASE_NAME: ${{ vars.DATABASE_NAME }}
+  DATABASE_PASSWORD: ${{ vars.DATABASE_PASSWORD }}
+  DATABASE_USER: ${{ vars.DATABASE_USER }}
 
 permissions:
   id-token: write # This is required for requesting the JWT
