@@ -48,7 +48,7 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
       - name: Run Tests
-        run: pytest --cov=tv_and_film_buffAPI --cov-report=xml --junitxml=unit-test-results.xml
+        run: pytest --cov-report=xml --junitxml=unit-test-results.xml
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
