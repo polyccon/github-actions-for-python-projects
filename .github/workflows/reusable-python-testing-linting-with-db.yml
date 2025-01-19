@@ -2,6 +2,10 @@ name: reusable-testing-linting-pipeline-with-db
 
 on:
   workflow_call:
+    inputs:
+      DJANGO_SETTINGS_MODULE:
+          required: true
+          type: string
 
 env:
   JEST_JUNIT_OUTPUT_FILE: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/*.xml"
