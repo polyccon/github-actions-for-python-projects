@@ -62,7 +62,7 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
       - name: Run Tests
-        run: pytest ${{ inputs.directories_to_test }} --cov=${{ inputs.directories_for_coverage }} --junitxml=unit-test-results.xml
+        run: pytest ${{ inputs.directories_to_test }} --cov=${{ inputs.directories_for_coverage }} --cov-report=xml --junitxml=unit-test-results.xml
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
