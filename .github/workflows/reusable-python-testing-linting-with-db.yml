@@ -18,7 +18,7 @@ on:
           default: "app/"
 
 env:
-  JEST_JUNIT_OUTPUT_FILE: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/*.xml"
+  JEST_JUNIT_OUTPUT_FILE: "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/unit-test-results.xml"
   DJANGO_SETTINGS_MODULE: ${{ inputs.DJANGO_SETTINGS_MODULE }}
   DATABASE_HOST: ${{ vars.DATABASE_HOST }}
   DATABASE_NAME: ${{ vars.DATABASE_NAME }}
